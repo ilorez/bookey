@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
-export default {
+const withMT = require("@material-tailwind/react/utils/withMT");
+module.exports = withMT({
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -37,7 +38,10 @@ export default {
           700: '#1E1D1D',
           750: '#1E1E1E',
         },
-
+        'bookey-other': {
+          'aqua': '#268EAE',
+          'blue': '#4882F0',
+        },
         'correct': '#02F29E',
         'light-correct': 'rgba(2, 242, 158, 0.2)',
         'incorrect': '#F24D27',
@@ -66,4 +70,4 @@ export default {
     },
   },
   plugins: [],
-}
+});

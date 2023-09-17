@@ -2,7 +2,7 @@ import BgFooter from "./bgFooter";
 
 function Footer() {
     return (
-        <footer >
+        <footer className="relative top-1">
             <BgFooter />
         </footer>
     )
