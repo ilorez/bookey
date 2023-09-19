@@ -6,6 +6,9 @@ module.exports = withMT({
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    screens: {
+      'ssm': '290px',
+    },
     extend: {
       fontFamily: {
         'bookey': ['Itim', 'Mitr', 'ui-sans-serif', 'system-ui']

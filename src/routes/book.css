@@ -1,0 +1,61 @@
+.book-info li {
+    display: flex;
+    /* align-items: center; */
+
+    gap: 3px;
+}
+
+.book-info {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    /* gap: 1rem; */
+    flex-wrap: wrap;
+}
+
+.book-info li p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @apply text-bookey-gray-700;
+    /* min-width: fit-content; */
+
+}
+
+.book-info li::after {
+    content: '';
+    /* position: absolute; */
+    /* left: -1rem; */
+    /* top: 50%; */
+    /* height: fit-content; */
+    background-color: #DC533B;
+    width: 1px;
+    opacity: .5;
+    margin: 10px;
+    /* -webkit-transform: translate(-50%, -50%); */
+    /* -moz-transform: translate(-50%, -50%); */
+    /* -ms-transform: translate(-50%, -50%); */
+    /* -o-transform: translate(-50%, -50%); */
+    /* transform: translate(-50%, -50%); */
+}
+
+.book-info li span {
+    @apply text-bookey-gray-600;
+}
+
+
+.reviews-rate::before {
+    content: '';
+    background-color: #DC533B;
+    width: 1px;
+    opacity: .5;
+    margin: 10px;
+}
+
+.book-info li:last-child::after {
+    display: none;
+}
+
+.buttons-style {
+    @apply flex px-bookey-2 py-bookey-1 items-center gap-2 text-bookey-gray-100 rounded-md min-h-full;
+}

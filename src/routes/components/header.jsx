@@ -7,13 +7,16 @@ import BackBtn from "./backBtn";
 
 function Header() {
     const [isSeaching, setIsSeaching] = useState(false)
+    const isBack = () => {
+        setIsSeaching(false);
+    }
     // console.log(isSeaching)
     return (
         <header className="flex flex-col text-primary-one">
             <div className="flex flex-col bg-bookey-red-800 pb-4">
                 {!isSeaching && <HeaderNavBar />}
                 <div className="flex justify-center gap-3 items-center px-3">
-                    {isSeaching && <BackBtn />}
+                    {isSeaching && <BackBtn func={isBack} />} {/* on click on back button cancel searching */}
                     <SearchBar searching={isSeaching} func={setIsSeaching} />
                 </div>
                 {!isSeaching && <HeaderInfo />}
